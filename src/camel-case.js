@@ -7,10 +7,16 @@ EX: camelCase("supercalifragalisticexpialidocious") —> "supercalifragalisticex
 */
 
 function camelCase(str) {
-   let newStr = str.split(" ").map(function(each) {
-       return each = each.charAt(0).toUpperCase() + each.slice(1);
-   }).join("");
-
-   return newStr = newStr.charAt(0).toLowerCase() + newStr.slice(1);
+  var output=[]
+  for (var i = 0; i < str.length; i++) {
+    if(str.charAt(i)==" "){
+      output.push(str.charAt(i+1).toUpperCase());
+      i++;;
+    }
+  else {
+    output.push(str.charAt(i));
+    }
+  };
+  return output.join('')
 }
 module.exports = camelCase;
