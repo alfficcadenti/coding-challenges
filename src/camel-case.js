@@ -13,3 +13,4 @@ function camelCase(str) {
 
    return newStr = newStr.charAt(0).toLowerCase() + newStr.slice(1);
 }
+module.exports = camelCase;
